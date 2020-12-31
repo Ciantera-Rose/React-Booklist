@@ -15,34 +15,22 @@ export default function Booklist() {
   return (
     <section className="booklist">
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   );
 }
 
 const Book = () => {
+  const title = 'Humans'
+  const author = "Brandon Stanton";
   return (
-  <article className='book'>
-    <Image />
-    <Title /> 
-    <Author /> 
-  </article>
- )
-}
-
-const Image = () => (
-  <img
-    src="https://images-na.ssl-images-amazon.com/images/I/51fPR50mdlL._AC_SX184_.jpg"
-    alt=""
-  />
-)
-
-const Title = () => <h1>Humans</h1>
-
-const Author = () => <h4>Brandon Stanton</h4>
-
+    <article className="book">
+      <img
+        src="https://images-na.ssl-images-amazon.com/images/I/51fPR50mdlL._AC_SX184_.jpg"
+        alt=""
+      />
+      <h1>{title}</h1>
+      <h4>{author.toUpperCase()}</h4>
+      {/* <p>{}</p> */}
+    </article>
+  );
+};
