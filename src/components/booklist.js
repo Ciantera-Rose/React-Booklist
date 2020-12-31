@@ -24,7 +24,7 @@ const books = [
     title: "Digital Minimalism: Choosing a Focused Life in a Noisy World",
     author: "Cal Newport",
   },
-  
+
   { id: 3,
     img: "https://m.media-amazon.com/images/I/91-C86tJc2L._AC_UY218_.jpg",
     title: "Algorithms Illuminated: Part 1: The Basics",
@@ -37,7 +37,7 @@ export default function Booklist() {
     <section className="booklist">
       {books.map((book) => {
         return (
-         <Book key={book.id} book={book}></Book>
+         <Book key={book.id} {...book}></Book>
         )
       })}
     </section>
@@ -45,7 +45,7 @@ export default function Booklist() {
 }
 
 const Book = (props) => {
-  const { img, title, author } = props.book
+  const { img, title, author } = props
   return (
     <article className="book">
       <img src={img} alt="" />
